@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — README Injector</title>
+<meta name="description" content="Privacy policy for the README Injector Chrome extension. Your data stays on your device.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #000;
+    color: #0ed145;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+  }
+  main { width: 100%; max-width: 720px; }
+  .prompt { color: #0ed145; opacity: .85; margin-bottom: 8px; }
+  .prompt .cursor {
+    display: inline-block; width: 9px; height: 17px;
+    background: #0ed145; vertical-align: -3px;
+    animation: blink 1s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+  h1 { font-size: 22px; margin: 24px 0 4px; font-weight: 700; }
+  .updated { opacity: .65; font-size: 13px; margin-bottom: 32px; }
+  h2 { font-size: 16px; margin: 28px 0 8px; font-weight: 700; }
+  h2::before { content: "## "; opacity: .6; }
+  p, li { margin-bottom: 10px; }
+  ul { list-style: none; }
+  ul li::before { content: "- "; opacity: .6; }
+  ul li { padding-left: 4px; }
+  a { color: #0ed145; }
+  footer {
+    margin-top: 48px; padding-top: 16px;
+    border-top: 1px solid rgba(14, 209, 69, .25);
+    font-size: 13px; opacity: .75;
+  }
+  ::selection { background: #0ed145; color: #000; }
+</style>
+</head>
+<body>
+<main>
+  <div class="prompt">greencat777@readme-injector:~$ cat privacy-policy.txt<span class="cursor"></span></div>
+
+  <h1>Privacy Policy — README Injector</h1>
+  <div class="updated">Last updated: October 13, 2026</div>
+
+  <p>README Injector is a Chrome extension that prepends or appends markdown snippets to your GitHub repository READMEs. This policy explains what it does with your data, in plain terms: it keeps everything on your device.</p>
+
+  <h2>Data stored on your device</h2>
+  <ul>
+    <li>Your GitHub personal access token, which you paste into the extension yourself. It is kept in the extension's local storage (<code>chrome.storage.local</code>) so you don't have to re-enter it.</li>
+    <li>Your extension preferences (e.g. snippet text, prepend/append choice).</li>
+  </ul>
+
+  <h2>Data sent to GitHub</h2>
+  <p>To do its job, the extension talks to the GitHub API (<code>api.github.com</code>) using your token. It only ever:</p>
+  <ul>
+    <li>Lists your repositories, so you can pick which ones to update.</li>
+    <li>Reads README files from the repositories you select.</li>
+    <li>Commits README updates that you explicitly approve.</li>
+  </ul>
+
+  <h2>What is never collected or shared</h2>
+  <ul>
+    <li>Your token, repositories, and README contents are never sent to us or any third party. We never see any of it.</li>
+    <li>No analytics, no tracking, no crash reporting, no ads.</li>
+    <li>The token pre-fill helper on GitHub's token pages only fills in form fields (name, expiration, scopes). It never reads or transmits the token GitHub generates — you copy that yourself.</li>
+  </ul>
+
+  <h2>Deleting your data</h2>
+  <ul>
+    <li>Click <strong>Forget</strong> in the extension popup to delete the stored token from your device.</li>
+    <li>Uninstalling the extension removes all of its locally stored data.</li>
+  </ul>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the new version will be posted here and the extension's store listing will be updated.</p>
+
+  <h2>Contact</h2>
+  <p>GreenCat777 — <a href="https://greencat777.xyz/social/">greencat777.xyz</a></p>
+
+  <footer>README Injector · your data stays on your device</footer>
+</main>
+</body>
+</html>
